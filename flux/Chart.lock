@@ -1,0 +1,15 @@
+dependencies:
+- name: aggrigation
+  repository: file:///../home/datta/Desktop/Projeccts/gslab-mini-project/aggregation/aggrigation/
+  version: 0.1.0
+- name: mongo-helm
+  repository: file:///../home/datta/Desktop/Projeccts/gslab-mini-project/mongoyamls/mongo-helm/
+  version: 0.1.0
+- name: patient-data-helm
+  repository: file:///../home/datta/Desktop/Projeccts/gslab-mini-project/patientdata/patient-data-helm/
+  version: 0.1.0
+- name: view_data_helm
+  repository: file:///../home/datta/Desktop/Projeccts/gslab-mini-project/view_data/view_data_helm/
+  version: 0.1.0
+digest: sha256:ddbbed0b920eae5bc2570e6c29b4638045dc18520ac02fd59c055e9a254be767
+generated: "2022-09-20T17:45:45.782492049+05:30"

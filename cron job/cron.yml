@@ -1,0 +1,21 @@
+
+
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: my-job
+spec:
+  jobTemplate:
+    metadata:
+      name: my-job
+    spec:
+      template:
+        spec:
+          containers:
+          - image: moredatta574/cronjob:tagname
+            name: my-job
+            command: ["python3", "/app/cron.py"]
+            resources: {}
+          restartPolicy: OnFailure
+  schedule: '0 12  * * *'
+status: {}

@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: view-dep
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: view-app
+  template:
+    metadata:
+      labels:
+        app: view-app
+    spec:
+      containers:
+      - name: view-app
+        image: moredatta574/viewdata
+        ports:
+        - containerPort: 9000

@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: covid-dep
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: covid-app
+  template:
+    metadata:
+      labels:
+        app: covid-app
+    spec:
+      containers:
+      - name: covid-app
+        image: moredatta574/covid-getdata
+        ports:
+        - containerPort: 8000

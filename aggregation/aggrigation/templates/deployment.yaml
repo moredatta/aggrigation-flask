@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aggr-dep
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: aggr-app
+  template:
+    metadata:
+      labels:
+        app: aggr-app
+    spec:
+      containers:
+      - name: aggr-app
+        image: moredatta574/covid-aggregation:latest
+        ports:
+        - containerPort: 7000

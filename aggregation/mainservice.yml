@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: aggr-service
+spec:
+  selector:
+    app: aggr-app
+  type: NodePort
+  ports:
+  - port: 7000
+    targetPort: 7000
+    nodePort: 31313
